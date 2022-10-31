@@ -1,0 +1,21 @@
+name: CHAOSS Blog RSS Feed
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  gene-rss:
+    runs-on: ubuntu-latest
+    name: A job to gene RSS
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Test Rssify
+      uses: tabhub/rssify@master
+      with:
+        title: CHAOSS Blog RSS
+        url: https://chaoss.community/blog/
+        item-title-css: .title > a
+        item-url-css: .title > a
+        # item-description-css: .excerpt + p
