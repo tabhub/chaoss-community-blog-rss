@@ -2,7 +2,8 @@ name: CHAOSS Blog RSS Feed
 
 on:
   push:
-  workflow_dispatch:
+  schedule:
+    - cron: "1 0 * * *"
 
 jobs:
   gene-rss:
@@ -18,4 +19,3 @@ jobs:
         url: https://chaoss.community/blog/
         item-title-css: .title > a
         item-url-css: .title > a
-        # item-description-css: .excerpt + p
