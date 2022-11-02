@@ -20,4 +20,4 @@ jobs:
         url: https://chaoss.community/blog/
         item-title-css: .title > a
         item-url-css: .title > a
-        item-author-css: .meta-author > a
+        item-author-css: '.meta-author > a'
