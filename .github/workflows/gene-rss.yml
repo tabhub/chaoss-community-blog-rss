@@ -2,6 +2,7 @@ name: CHAOSS Blog RSS Feed
 
 on:
   push:
+  workflow_dispatch:
   schedule:
     - cron: "1 0 * * *"
 
